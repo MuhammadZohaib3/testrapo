@@ -1,4 +1,681 @@
-body{
-    background-color: black;
-    color: aliceblue;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-size: 62.5%;
+    min-height: 100rem;
+    background-color: #282834;
+
+}
+
+header {
+    height: 3.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    background-color: #363543;
+    position: relative;
+
+
+}
+
+nav div {
+    display: flex;
+    display: inline-flex;
+    margin: 5px 36px 0px 39px;
+
+}
+
+.d1 {
+    padding-left: 1rem;
+}
+
+.d1 img {
+    width: 1.5rem;
+    margin-top: 1rem;
+    height: 1.5rem;
+}
+
+.zobi {
+    font-size: 1.5rem;
+    padding: 1rem 0rem 0rem 0rem;
+    color: white;
+}
+header nav div.name {
+
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff
+}
+.d3 {
+    margin-top: 1.75rem;
+    padding-left: 18.5rem;
+}
+
+.d3 img {
+    padding-right: 2.5rem;
+}
+
+header nav div.name {
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+
+}
+header nav div.name i,
+header nav div.name h1 {
+    font-size: 1rem;
+    padding: .5rem;
+
+}
+
+header nav div.list {
+    flex: 0;
+}
+
+header nav div.list ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    display: inline-flex;
+    margin-top: 8px;
+}
+
+header nav div.list ul li {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.list #id1 {
+    font-weight: bold;
+
+}
+
+.list .id {
+    font-weight: lighter;
+    color: white;
+}
+
+header nav div.list ul li a {
+    padding-left: 44px;
+    color: white;
+
+}
+section.section {
+    background-color: #363543;
+    min-height: 44rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-left: 4.5rem;
+
+}
+
+section.section div.introNameSelf {
+    width: 48%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+section.section div.introNameSelf div.name {
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+section.section div.introNameSelf div.name h1 span {
+    opacity: 0.5;
+}
+
+
+section.section div.introNameSelf div.line {
+    margin: 1rem;
+    width: 35%;
+    background-color: rgb(240, 240, 36);
+    height: 5px;
+}
+
+
+section.section div.introNameSelf div.intro {
+
+    width: 48%;
+    min-height: 20%;
+}
+
+section.section div.introNameSelf div.intro span {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.588);
+}
+
+section.section div.introNameSelf div.name h2 {
+    font-weight: lighter;
+    font-size: 4rem;
+    letter-spacing: .3rem;
+    color: rgba(255, 255, 255, 0.588);
+}
+
+section.section div.introNameSelf div.name h1 {
+    font-size: 4.7rem;
+    letter-spacing: .5rem;
+    color: white;
+
+}
+section.section div.image {
+    position: absolute;
+    width: 45%;
+    height: 90%;
+    left: 21rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+section.section div.image div.circle {
+    margin-top: 2rem;
+    background-color: #282834;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 5
+
+}
+
+section.section div.image div.circle img {
+    height: 120%;
+    width: 65%;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    bottom: -1.5rem;
+
+}
+section.section div.serContain {
+    min-height: 15rem;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 5rem 10rem 11rem;
+    z-index: 10;
+}
+
+section.section div.serContain div.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+}
+
+section.section div.serContain div.service h1 {
+    color: rgba(255, 255, 255, 0.588);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section.section div.serContain div.service p {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.948);
+}
+
+.box-2 img {
+    width: 8rem;
+    height: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+section.com {
+    min-height: 10rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: -4rem;
+}
+
+.s1 img {
+    width: 9%;
+    padding: 0px 0px 7px 10px;
+    margin: 2%;
+}
+
+.s1 {
+    display: flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#s2 {
+    width: 8%;
+    border: 5px solid #7f7585;
+    border-radius: 30px;
+    background-color: #7f7585;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2%;
+    display: inline-block;
+}
+
+section.com div.comBox {
+    background-color: #363543;
+    width: 80%;
+    min-height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 4px 2px rgb(26, 25, 25);
+}
+
+section.com div.comBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 4rem;
+    background-color: #282834;
+    width: 13rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+section.needsAndProject {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+}
+
+section.needsAndProject div.need {
+    width: 40%;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6.5rem;
+}
+
+section.needsAndProject div.need div.content {
+
+    width: 80%;
+}
+
+section.needsAndProject div.need div.content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+section.needsAndProject div.need div.content p {
+
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.588);
+
+}
+
+section.needsAndProject div.need div.numbersContainer {
+    width: 80%;
+    min-height: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.needsAndProject div.need div.numbersContainer div.number {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.needsAndProject div.need div.numbersContainer div.number div.num-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+
+}
+
+section.needsAndProject div.projectContainer {
+    margin-top: -8rem;
+    width: 45%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section.needsAndProject div.projectContainer div.project {
+    width: 85%;
+    height: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0rem;
+    margin-right: 6rem;
+    border-bottom: 2.5px solid #363543;
+}
+
+
+section.needsAndProject div.projectContainer div.project div.image {
+    height: 70%;
+    width: 35%;
+
+}
+
+section.needsAndProject div.projectContainer div.project div.image img {
+    height: 110%;
+    width: 95%;
+    object-fit: cover;
+}
+
+section.needsAndProject div.projectContainer div.project div.content {
+
+    padding: 0 0 0 1rem;
+    width: 35%;
+}
+
+section.needsAndProject div.projectContainer div.project div.content h1:first-child {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: .1rem;
+    color: white;
+}
+
+.content img {
+    padding-left: 17rem;
+    line-height: 0px;
+
+}
+
+section.needsAndProject div.projectContainer div.project div.content h1:nth-child(3) {
+    color: rgba(255, 255, 255, 0.588);
+    font-size: 1rem;
+    line-height: 0px;
+    font-weight: bold;
+}
+
+div.aboutme {
+    color: white;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 3rem;
+    padding: 1rem;
+}
+
+
+div.footerEndBoxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem 4rem 0rem 4rem;
+}
+
+div.EndBoxes {
+    display: block;
+    width: 50%;
+    height: 15rem;
+    color: white;
+    font-size: 1.1rem;
+    margin: 1.8rem;
+    padding: 1.5rem;
+    background-color: #353545;
+    box-sizing: content-box;
+    box-shadow: 2px 4px 5px 3px #242424;
+}
+
+.EndBoxes h3 {
+    font-size: 1.7rem;
+    line-height: 3rem;
+}
+
+.EndBoxes p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.588);
+}
+
+footer img {
+
+    width: 3rem;
+    border: 10px solid #282834;
+    border-radius: 45%;
+    background-color: #282834;
+}
+
+
+
+/* responsive */
+@media screen and (max-width:760px) {
+
+    header nav div.name i,
+    header nav div.name h1 {
+        font-size: 1.8rem;
+        padding: .3rem;
+    }
+
+    header nav div.list ul {
+
+        flex-direction: column;
+    }
+
+    header nav div.list {
+        background-color: white;
+        position: absolute;
+        display: none;
+        right: 0;
+        width: 100%;
+        top: 4rem;
+    }
+
+    header nav div.list ul li {
+        color: white;
+        margin: .5rem 0px;
+    }
+
+    header nav div.list ul li a {
+        color: white;
+    }
+
+    section.section {
+        flex-direction: column;
+        position: static;
+        overflow: hidden;
+    }
+
+    section.section div.introNameS {
+        width: 100%;
+        order: 0;
+        min-height: 11rem;
+        align-items: center;
+        position: static;
+    }
+
+    section.section div.introNameSelf div.name {
+
+        justify-content: center;
+        width: 95%;
+    }
+
+    section.section div.introNameSelf div.name h2,
+    section.section div.introNameSelf div.name h1 {
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+        color: white;
+    }
+
+    section.section div.introNameSelf div.name h1 span {
+        opacity: 1;
+    }
+
+    section.section div.introNameSelf div.intro {
+
+        width: 95%;
+        min-height: 20%;
+    }
+
+
+    section.section div.image {
+        position: static;
+        order: 1;
+        min-width: 15rem;
+        min-height: 15rem;
+
+    }
+
+    section.section div.image div.circle {
+        position: static;
+        min-height: 100%;
+        min-width: 100%;
+        align-items: center;
+    }
+
+    section.section div.image div.circle img {
+        position: static;
+    }
+
+
+    section.section div.serContain {
+        order: 2;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 3px 0 2px;
+    }
+
+    section.section div.serContain div.service {
+        width: 80%;
+    }
+
+
+    section.com {
+        position: static;
+        margin-top: .8rem;
+    }
+
+    section.com div.comBox {
+        background-color: #4b4b4b;
+        width: 80%;
+        min-height: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    section.com div.comBox div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 4rem;
+        background-color: #363543;
+        width: 8rem;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        margin-left: .3rem;
+    }
+
+    section.needsAndProject {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    section.needsAndProject div.need {
+
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+
+    section.needsAndProject div.projectContainer {
+        width: 80%;
+    }
+
+    section.needsAndProject div.projectContainer div.project div.content h1:first-child {
+        font-size: 1.2rem;
+        margin-bottom: .3rem;
+    }
+
+    section.needsAndProject div.projectContainer div.project div.content h1:nth-child(2) {
+        font-size: .9rem;
+    }
+
+    div.aboutme {
+        color: white;
+        justify-content: center;
+        font-size: 1rem;
+        ;
+        margin: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    div.footerEndBoxes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin: 2rem 5rem 1rem 5rem;
+        padding-top: 3rem;
+    }
+
+    div.EndBoxes {
+        display: block;
+        width: 50%;
+        height: 10rem;
+        color: white;
+        font-size: 1rem;
+        margin: 1.5rem;
+        padding: 2rem;
+        background-color: #222223;
+        box-sizing: content-box;
+        box-shadow: 2px 4px 12px 3px #242424;
+
+
+    }
