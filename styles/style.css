@@ -491,7 +491,6 @@ footer img {
 
 /* responsive */
 @media screen and (max-width:760px) {
-
     header nav div.name i,
     header nav div.name h1 {
         font-size: 1.8rem;
@@ -676,6 +675,4 @@ footer img {
         background-color: #222223;
         box-sizing: content-box;
         box-shadow: 2px 4px 12px 3px #242424;
-
-
     }
