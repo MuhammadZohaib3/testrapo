@@ -213,7 +213,7 @@ section.section div.image div.circle {
 }
 
 section.section div.image div.circle img {
-    height: 120%;
+    height: 110%;
     width: 65%;
     background-size: cover;
     object-fit: cover;
