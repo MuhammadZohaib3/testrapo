@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
- <link rel="stylesheet" href="./styles/style.css">
- <script src="./app.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Budget App</title>
+        <!-- <link rel="shortcut icon" href="./budget.png" type="image/x-icon"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <script src="./app.js" defer></script>
+        <!-- <script src="./bootstrap.bundle.min.js"></script> -->
+        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
+    </head>
+<!-- <body>
     <header>
             <nav>
                 <div>
@@ -179,4 +185,143 @@
     </footer>
 
 </body>
-</html> 
+</html>  -->
+<body>
+
+    <div class="hero">
+
+        <!-- Warnning -->
+        <div class="warning" id="warning">
+            <p><span>Warning: </span> Input field cann't be empty and should be valid.</p>
+        </div>
+
+        <!-- Main Heading -->
+        <div class="main_hedaing">
+            <h1>BUDGET APP</h1>
+        </div>
+
+        <!-- Budget Section -->
+        <div class="budget_section">
+
+            <div class="if_bdg_is_notSet" id="if_bdg_is_notSet">
+                <h2>Please select your Budget first</h2>
+                <button class="set_budget_btn" onclick="setNewBudget()">Set Budget</button>
+            </div>
+
+            <div class="bdg_section_display" id="bdg_section_display">
+                <div class="bdg_date">
+                    <div class="set_date">
+                        <p class="from_p">From</p>
+                        <p id="strt_date"></p>
+                    </div>
+                    <h2>_</h2>
+                    <div class="set_date">
+                        <p class="to_p">To</p>
+                        <p id="end_date"></p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="budget_content">
+                    <div class="total_budget bud-txt">
+                        <h2>Total Bugget</h2>
+                        <p id="bdg_value"></p>
+                    </div>
+                    <div class="total_expenses bud-txt">
+                        <h2>Expenses</h2>
+                        <p id="bdg_exp_value"></p>
+                    </div>
+                    <div class="remaning_balance bud-txt">
+                        <h2>Balance</h2>
+                        <p id="bdg_bln_value"></p>
+                        <p class="over_balace" id="over_balace">Your expenses are <br> more than your budget.</p>
+                    </div>
+                </div>
+
+                <div class="budget_btns">
+                    <button class="new_budget_btn" onclick="setNewBudget()">Set Budget</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget form -->
+        <div class="form_container" id="budget_form">
+            <div class="budget_form">
+                <form action="">
+                    <h2>SET BUDGET</h2>
+                    <div class="tot_bdg_inp">
+                        <label for="total_bdg">Total Budget</label>
+                        <input type="number" id="total_bdg" placeholder="Enter total budget" required>
+                    </div>
+                    <label for="">Select Date Range</label>
+                    <div class="rng_bg_date">
+                        <div class="strt_bdg_date">
+                            <p>From</p>
+                            <input type="date" id="from_date" required>
+                        </div>
+                        <div class="end_bdg_date">
+                            <p>To</p>
+                            <input type="date" id="to_date" required>
+                        </div>
+                    </div>
+                    <div class="bdg_form_btns">
+                        <input type="button" class="set_bdg_btn" value="Set Budget" onclick="setBdgValues()">
+                        <input type="button" value="Cancel" class="cancel_bdg_btn" onclick="closeBudgetForm()">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Expense Section -->
+        <div class="expense_section">
+
+            <div class="expense_hd">
+                <h2>Expense List</h2>
+            </div>
+
+            <div id="exp_list">
+
+
+            </div>
+
+            <div class="add_exp_btn">
+                <button onclick="expAddBtn()">Add Expenses</button>
+            </div>
+
+        </div>
+
+        <!-- Expense Form -->
+        <div class="exp_form_container exp_form_active" id="exp_form_container">
+            <form action="" class="exp_form">
+                <h2>ADD EXPENSES</h2>
+                <label for="cate">Category</label>
+                <select name="" id="cate_drop" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Education">Education</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bill</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="">Total Amount</label>
+                <input type="number" name="" id="exp_amount" placeholder="Enter total amount" required>
+                <label for="">Chose Date</label>
+                <input type="date" name="" id="exp_date" required>
+                <label for="">Description</label>
+                <input type="text" id="exp_desc" placeholder="Enter description" required>
+                <div class="exp_form_btns">
+                    <input type="button" class="exp_btn_add" id="exp_btn_add" value="Add" onclick="expSavebtn()">
+                    <input type="button" class="exp_btn_cancel" value="Cancel" onclick="expCancelBtn()">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -489,7 +489,7 @@ footer img {
 
 
 
-/* responsive */
+ responsive 
 @media screen and (max-width:760px) {
     header nav div.name i,
     header nav div.name h1 {
@@ -675,4 +675,979 @@ footer img {
         background-color: #222223;
         box-sizing: content-box;
         box-shadow: 2px 4px 12px 3px #242424;
+    }*/
+    html,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.warning {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    background-color: #cc3300;
+    padding: 10px 0 10px 40px;
+    color: white;
+}
+
+.warning_active {
+    display: block;
+}
+
+.warning span {
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+}
+
+/* Main Heading */
+
+.main_hedaing h1 {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 48px;
+}
+
+/* Budget Section */
+
+.budget_section {
+    background-color:rgb(192, 155, 52);
+    border-radius: 24px;
+    margin: 40px;
+    padding: 40px 60px;
+    color: white;
+}
+
+.if_bdg_is_notSet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bdg_section_display {
+    display: none;
+}
+
+.bdg_date {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.set_date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.set_budget_btn {
+    padding: 12px 22px;
+    font-size: 16px;
+    color: rgb(52, 52, 192);
+    background-color: white;
+    border: 2px solid rgb(52, 52, 192);
+    transition: ease-in-out 0.3s;
+    border-radius: 8px;
+}
+
+.from_p,
+.to_p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(192, 192, 192);
+}
+
+.set_budget_btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+hr {
+    border: 0.5px solid rgba(192, 192, 192, 0.4);
+}
+
+.budget_content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bud-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.bud-txt h2 {
+    font-size: 28px;
+}
+
+.bud-txt p {
+    font-size: 20px;
+}
+
+.bud-txt .over_balace {
+    display: none;
+    font-size: 16px;
+    color: red;
+    text-align: center;
+    text-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.budget_btns {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.budget_btns button {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 22px;
+    color: rgb(52, 52, 192);
+    background-color: white;
+    border: none;
+    transition: ease-in-out 0.3s;
+}
+
+.budget_btns button:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* budget form */
+
+.form_container {
+    position: absolute;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.budget_form {
+    padding: 40px;
+    position: fixed;
+    border-radius: 12px;
+    background-color: rgb(236, 236, 236);
+    width: 800px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
+}
+
+.budget_form_display {
+    display: flex;
+}
+
+.budget_form h2 {
+    font-size: 36px;
+    color: rgb(52, 52, 192);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.budget_form input {
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.budget_form input:focus {
+    border: 2px solid rgb(52, 52, 192);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.budget_form label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tot_bdg_inp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.tot_bdg_inp input {
+    width: 80%;
+}
+
+.rng_bg_date {
+    display: flex;
+    margin-top: 5px;
+    gap: 40px;
+}
+
+.rng_bg_date p {
+    font-size: 14px;
+    color: rgb(114, 114, 114);
+}
+
+.bdg_form_btns {
+    margin: 40px 0;
+}
+
+.bdg_form_btns input {
+    cursor: pointer;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid rgb(52, 52, 192);
+    transition: ease-in-out 0.3s;
+}
+
+.bdg_form_btns input:hover {
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.set_bdg_btn {
+    background-color: rgb(52, 52, 192);
+    color: white;
+    outline: none;
+}
+
+.cancel_bdg_btn {
+    background-color: white;
+    margin-left: 20px;
+    color: rgb(52, 52, 192);
+}
+
+/* Expense Section */
+.expense_section {
+    background-color: rgb(29, 50, 128);
+    color: aliceblue;
+    padding: 60px;
+    margin: 40px;
+    border-radius: 24px;
+}
+
+
+
+.expense_list_container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 12px -2px rgba(0, 0, 0, 0.3);
+}
+
+.cat_name {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 3px;
+
+}
+
+.cat_name h6 {
+    font-size: 18px;
+}
+
+.cat_name p {
+    font-size: 14px;
+    color: rgb(37, 37, 37);
+}
+
+.exp_desc {
+    flex: 14;
+}
+
+.exp_desc p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.exp_desc h4 {
+    color: rgb(153, 153, 153);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.exp_icon,
+.cat_icon {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+}
+
+.cat_icon i {
+    font-size: 18px;
+    color: white;
+}
+
+.exp_icon i {
+    font-size: 18px;
+    color: rgb(52, 52, 192);
+    transition: ease-in-out 0.3s;
+}
+
+.exp_icon:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exp_icon:hover .exp_edit {
+    color: rgb(6, 6, 148);
+}
+
+.exp_icon:hover .exp_delete {
+    color: red;
+}
+
+.desc_container_active {
+    display: block;
+}
+
+.add_exp_btn button {
+    padding: 12px 22px;
+    font-size: 16px;
+    background-color: rgb(52, 52, 192);
+    color: white;
+    border: 2px solid rgb(52, 52, 192);
+    border-radius: 8px;
+    transition: ease-in-out 0.3s;
+    margin-top: 40px;
+}
+
+.add_exp_btn button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Expense Form */
+
+.exp_form_container {
+    top: 0;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp_form_active {
+    display: none;
+}
+
+.exp_form {
+    position: fixed;
+    background-color: rgb(236, 236, 236);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 40vw;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
+}
+
+.exp_form h2 {
+    text-align: center;
+    color:black(52, 52, 192);
+    font-size: 32px;
+}
+
+.exp_form label {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.exp_form input,
+select {
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.exp_form input:focus {
+    border: 2px solid rgb(52, 52, 192);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exp_form select:focus {
+    border: 2px solid rgb(52, 52, 192);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exp_form_btns input {
+    cursor: pointer;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid rgb(52, 52, 192);
+    transition: ease-in-out 0.3s;
+    margin-top: 40px;
+}
+
+.exp_form_btns input:hover {
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exp_btn_add {
+    background-color: rgb(52, 52, 192);
+    color: white;
+    outline: none;
+
+}
+
+.exp_btn_cancel {
+    background-color: white;
+    margin-left: 20px;
+    color: rgb(52, 52, 192);
+}
+
+
+
+/* Media Query */
+@media screen and (max-width: 1000px) {
+
+    /* Budget Form */
+    .budget_form {
+        width: 500px;
     }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .warning {
+        font-size: 14px;
+    }
+
+    /* Main Heading */
+
+    .main_hedaing h1 {
+        padding-top: 50px;
+        font-size: 32px;
+    }
+
+    /* Budget Section */
+    .budget_section {
+        margin: 20px 40px;
+        padding: 40px;
+    }
+    
+    .if_bdg_is_notSet {
+        font-size: 14px;
+    }
+
+    .from_p,
+    .to_p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    #strt_date,
+    #end_date {
+        font-size: 16px;
+    }
+
+    .bud-txt h2 {
+        font-size: 20px;
+    }
+
+    .bud-txt p {
+        font-size: 16px;
+    }
+
+    #over_balace{
+        font-size: 10px;
+    }
+
+    /* Budget Form */
+    .budget_form {
+        width: 400px;
+        padding-bottom: 10px;
+    }
+
+    .budget_form h2 {
+        font-size: 28px;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    .budget_form label {
+        font-size: 14px;
+    }
+
+    .tot_bdg_inp input{
+        width: 100%;
+    }
+
+    .rng_bg_date {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rng_bg_date input {
+        width: 100%;
+    }
+
+    .rng_bg_date p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    /* Expense Form */
+    .exp_form {
+        width: 60vw;
+    }
+    
+    .exp_form h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    
+    .exp_form label {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    .exp_form input,
+    select {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    .exp_form_btns input {
+        margin-top: 30px;
+    }
+
+    /* Expense Section */
+    .expense_section {
+        padding: 40px;
+        margin: 40px;
+    }
+    
+    .expense_list_container {
+        padding: 15px 30px;
+        gap: 15px;
+    }
+    
+    .cat_name {
+        flex: 5;
+    }
+    
+    .cat_name h6 {
+        font-size: 14px;
+    }
+    
+    .cat_name p {
+        font-size: 10px;
+    }
+    
+    .exp_desc {
+        flex: 14;
+    }
+    
+    .exp_desc p {
+        text-align: justify;
+        font-size: 12px;
+    }
+    
+    .exp_desc h4 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .exp_icon,
+    .cat_icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .cat_icon i {
+        font-size: 16px;
+    }
+    
+    .exp_icon i {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+    .warning {
+        font-size: 12px;
+    }
+
+    /* Main Heading */
+    .main_hedaing h1 {
+        padding-top:40px;
+        font-size: 28px;
+    }
+
+    /* Budget Section */
+    
+    .if_bdg_is_notSet {
+        font-size: 12px;
+    }
+
+    .set_budget_btn{
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    .from_p,
+    .to_p {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    #strt_date,
+    #end_date {
+        font-size: 14px;
+    }
+
+    .bud-txt h2 {
+        font-size: 16px;
+    }
+
+    .bud-txt p {
+        font-size: 14px;
+    }
+
+    #over_balace{
+        font-size: 8px;
+    }
+
+    .budget_btns{
+        margin-top: 20px;
+    }
+
+    .budget_btns button{
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    /* Budget Form */
+    .budget_form {
+        width: 300px;
+    }
+
+    .budget_form h2 {
+        font-size: 24px;
+    }
+
+    .budget_form label {
+        font-size: 14px;
+    }
+
+    .rng_bg_date {
+        gap: 15px;
+    }
+
+    .rng_bg_date p {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .bdg_form_btns{
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bdg_form_btns input{
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    /* Expense Form */
+    .exp_form {
+        width: 300px;
+    }
+    
+    .exp_form h2 {
+        font-size: 24px;
+    }
+    
+    .exp_form label {
+        font-size: 14px;
+    }
+    
+    .exp_form input,
+    select {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+    
+    .exp_form_btns input {
+        margin-top: 25px;
+    }
+
+
+    /* Expense Section */
+
+    .expense_hd h2{
+        font-size: 18px;
+    }
+    
+    .expense_list_container {
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    
+    .cat_name {
+        flex: 5;
+    }
+    
+    .cat_name h6 {
+        font-size: 12px;
+    }
+    
+    .cat_name p {
+        font-size: 8px;
+    }
+    
+    .exp_desc {
+        flex: 14;
+    }
+    
+    .exp_desc p {
+        font-size: 12px;
+    }
+    
+    .exp_desc h4 {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+    
+    .exp_icon,
+    .cat_icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .cat_icon i {
+        font-size: 12px;
+    }
+    
+    .exp_icon i {
+        font-size: 12px;
+    }
+
+    .exp_price p{
+        font-size: 14px;
+    }
+
+    .add_exp_btn button{
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .warning {
+        font-size: 8px;
+    }
+
+    /* Main Heading */
+    .main_hedaing h1 {
+        padding-top:30px;
+        font-size: 20px;
+    }
+
+    /* Budget Section */
+    
+    .if_bdg_is_notSet {
+        font-size: 8px;
+    }
+
+    .set_budget_btn{
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+    .from_p,
+    .to_p {
+        font-size: 8px;
+        margin-bottom: 2px;
+    }
+
+    #strt_date,
+    #end_date {
+        font-size: 10px;
+    }
+
+    .bud-txt h2 {
+        font-size: 10px;
+    }
+
+    .bud-txt p {
+        font-size: 8px;
+    }
+
+    #over_balace{
+        font-size: 6px;
+    }
+
+    .budget_btns{
+        margin-top: 15px;
+    }
+
+    .budget_btns button{
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+    /* Budget Form */
+    .budget_form {
+        width: 250px;
+    }
+
+    .budget_form h2 {
+        font-size: 18px;
+    }
+
+    .budget_form label {
+        font-size: 10px;
+    }
+
+    .budget_form input{
+        padding: 8px 8px;
+        font-size: 10px;
+    }
+
+    .rng_bg_date {
+        gap: 10px;
+    }
+
+    .rng_bg_date p {
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+
+    .bdg_form_btns{
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bdg_form_btns input{
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+    /* Expense Form */
+    .exp_form {
+        width: 250px;
+    }
+    
+    .exp_form h2 {
+        font-size: 18px;
+    }
+    
+    .exp_form label {
+        font-size: 12px;
+    }
+    
+    .exp_form input,
+    select {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+    
+
+    /* Expense Section */
+
+    .expense_hd h2{
+        font-size: 12px;
+    }
+    
+    .expense_list_container {
+        padding: 10px 15px;
+        gap: 5px;
+    }
+    
+    .cat_name {
+        flex: 5;
+    }
+    
+    .cat_name h6 {
+        font-size: 10px;
+    }
+    
+    .cat_name p {
+        font-size: 8px;
+    }
+    
+    .exp_desc {
+        /* flex: 14; */
+        display: none;
+    }
+    
+    .exp_desc p {
+        font-size: 12px;
+    }
+    
+    .exp_desc h4 {
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+    
+    .exp_icon,
+    .cat_icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .cat_icon i {
+        font-size: 8px;
+    }
+    
+    .exp_icon i {
+        font-size: 8px;
+    }
+
+    .exp_price p{
+        font-size: 8px;
+    }
+
+    .add_exp_btn button{
+        font-size: 10px;
+        padding: 10px 12px;
+    }
+
+}
